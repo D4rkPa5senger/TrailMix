@@ -43,7 +43,7 @@
         <activity android:name=".SettingsActivity" />
         <activity android:name=".ViewTrailsActivity" />
         <activity android:name=".MapActivity" />
-
+        <activity android:name="com.mainmethod.trailmix1.preferences.PrefActivity" />
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyDXMjdwSnjLks1nyM1UaPDoUriAAYvoUTk" />

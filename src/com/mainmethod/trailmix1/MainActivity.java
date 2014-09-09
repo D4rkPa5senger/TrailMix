@@ -3,6 +3,7 @@ package com.mainmethod.trailmix1;
 //import com.mainmethod.trailmix1.gmapsapp.R;
 
 import com.mainmethod.trailmix1.R;
+import com.mainmethod.trailmix1.preferences.PrefActivity;
 
 import android.app.Activity;
 //import android.app.Activity;
@@ -16,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 public class MainActivity extends Activity {
@@ -63,6 +65,32 @@ public class MainActivity extends Activity {
 
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		getActionBar().setHomeButtonEnabled(true);
+
+		final Button button_run = (Button) findViewById(R.id.button_run);
+		button_run.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				// Perform action on click
+				openMap(v);
+			}
+		});
+		
+		final Button button_bike = (Button) findViewById(R.id.button_bike);
+		button_bike.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				// Perform action on click
+				openMap(v);
+			}
+		});
+		
+		final Button button_hike = (Button) findViewById(R.id.button_hike);
+		button_hike.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				// Perform action on click
+				openMap(v);
+			}
+		});
+		
+
 	}
 
 	@Override
@@ -93,14 +121,11 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		switch (item.getItemId()) {
-		case R.id.action_settings:
-			Intent settingsIntent = new Intent(this, SettingsActivity.class);
+		case R.id.action_preferences:
+			Intent settingsIntent = new Intent(this, PrefActivity.class);
 			startActivity(settingsIntent);
 			break;
-		case R.id.action_about:
-			Intent aboutIntent = new Intent(this, AboutActivity.class);
-			startActivity(aboutIntent);
-			break;
+	
 		default:
 			break;
 
